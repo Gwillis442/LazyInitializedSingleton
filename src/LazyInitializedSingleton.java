@@ -1,3 +1,5 @@
+package src;
+
 public class LazyInitializedSingleton {
     private static LazyInitializedSingleton instance;
 
@@ -9,4 +11,6 @@ public class LazyInitializedSingleton {
         }
         return instance;
     }
+
+
 }

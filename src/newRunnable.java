@@ -1,3 +1,5 @@
+package src;
+
 public class newRunnable implements Runnable {
     private Thread t;
     private String threadName;
@@ -11,7 +13,8 @@ public class newRunnable implements Runnable {
         System.out.println("Running " + threadName);
         try {
             for(int i = 4; i > 0; i--) {
-                System.out.println("Thread " + threadName + ", " + i);
+                LazyInitializedSingleton singleton = LazyInitializedSingleton.getInstance();
+                System.out.println(threadName + " hash code: " + singleton.hashCode());
 
                 Thread.sleep(50);
             }
